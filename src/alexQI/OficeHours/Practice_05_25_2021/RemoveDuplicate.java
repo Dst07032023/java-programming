@@ -54,7 +54,9 @@ public class RemoveDuplicate {
     }
 
     public static ArrayList<Integer> removeDup2(ArrayList<Integer> list){
-        list.removeIf( e -> Collections.frequency(list, e) > 1);
+        list.removeIf( each -> Collections.frequency(list, each) > 1);
         return list;
     }
+
+    //for (int each : list)
 }

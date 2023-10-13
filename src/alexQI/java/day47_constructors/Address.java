@@ -9,8 +9,25 @@ public class Address {
     private String zipCode;
     private String country = "USA";
 
+    //constructor method - automatically called
+    public  Address() {
+        System.out.println("Address constructor");
+        street = "123 inknown st";
+        city = "Unknown";
+        state = "Unknown";
+        zipCode = "2342";
 
-    @Override
+    }
+    //second constructor, overloaded constructor, -> provides shortcut to initialize variables
+    //in same statement: ex: Address ad = new Address("123 java st", "Boston", "MA", "3421");
+    public Address( String street,String city,String state,String zipCode){
+        setStreet(street);//reuse the code in the setter method
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+    }
+
+
     public String toString() {
         return street + ", " + city + ", " + state + " " + zipCode;
     }
@@ -20,6 +37,12 @@ public class Address {
     }
 
     public void setStreet(String street) {
+        if(street.isEmpty() || street.length() > 50){
+            System.out.println("ERROR: Invalid street");
+            //System.exit(0);
+        }else{
+            this.street = street;
+        }
         this.street = street;
     }
 

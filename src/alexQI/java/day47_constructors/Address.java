@@ -27,7 +27,6 @@ public class Address {
         this.zipCode = zipCode;
     }
 
-
     public String toString() {
         return street + ", " + city + ", " + state + " " + zipCode;
     }

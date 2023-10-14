@@ -1,4 +1,4 @@
-package alexQI.java.day47_constructors;
+package alexQI.java.day47_constructors.student;
 
 public class Student {
     private String name;
@@ -22,5 +22,6 @@ public class Student {
     //constructor with name and age
     public Student(String name, int age) {
         System.out.println("name&age param constructor | " + name + "-" + age);
+
     }
 }

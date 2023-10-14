@@ -1,4 +1,4 @@
-package alexQI.java.day47_constructors.student;
+package alexQI.java.day47_constructors;
 
 public class Student {
     private String name;
